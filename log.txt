@@ -202,3 +202,43 @@ Song Name: Down In A Hole
 Artist(s): Alice In Chains
 Album:     Unplugged
 Preview:   https://p.scdn.co/mp3-preview/beb5afcbe14700b225af61cf43c22c77bc90edeb?cid=bbc17caf6c8a455ea3e8f22a1708a357
+
+Song Name: I Want It That Way
+Artist(s): Backstreet Boys
+Album:     The Hits--Chapter One
+Preview:   https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=bbc17caf6c8a455ea3e8f22a1708a357
+
+Title:       A Night at the Roxbury
+Year:        1998
+IMDB Rating: 6.2
+R. Tomatoes: 11%
+Country:     USA
+Language     English
+Plot:        Two dim-witted brothers dream of owning their own dance club or at least getting into the coolest and most exclusive club in town, The Roxbury.
+Actors:      Will Ferrell, Chris Kattan, Raquel Gardner, Viveca Paulin
+
+Title:       Kingsman
+Year:        2015
+IMDB Rating: N/A
+Country:     France
+Language     French
+Plot:        N/A
+Actors:      Marc Jarousseau, Nathalie Odzierejko, Guy Amram, Martin Darondeau
+
+Title:       The Lion King
+Year:        1994
+IMDB Rating: 8.5
+Country:     USA
+Language     English, Swahili, Xhosa, Zulu
+Plot:        Lion cub and future king Simba searches for his identity. His eagerness to please others and penchant for testing his boundaries sometimes gets him into trouble.
+Actors:      Rowan Atkinson, Matthew Broderick, Niketa Calame, Jim Cummings
+
+
+
+Title:       Kingsman
+Year:        2015
+IMDB Rating: N/A
+Country:     France
+Language     French
+Plot:        N/A
+Actors:      Marc Jarousseau, Nathalie Odzierejko, Guy Amram, Martin Darondeau

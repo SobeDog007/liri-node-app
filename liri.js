@@ -124,7 +124,7 @@ function commandSwitch(command, doWhatItSays = false)
 	      // Grab the input song (if one wasn't provided by "do-what-it-says").
 	      if (!doWhatItSays)
 	      {
-	      	var input = process.argv.slice(3).join("+");
+	      	input = process.argv.slice(3).join("+");
 
 	      	// If no input song exists, default to "The Sign" by Ace of Base.
 	      	if (input === "")
@@ -175,7 +175,7 @@ function commandSwitch(command, doWhatItSays = false)
 	 		// Grab the input movie (if one wasn't provided by "do-what-it-says").
 	 		if (!doWhatItSays)
 	      {
-	      	var input = process.argv.slice(3).join("+");
+	      	input = process.argv.slice(3).join("+");
 
 				// If no input movie exists, default to "Mr. Nobody".
 	      	if (input === "")
@@ -189,24 +189,34 @@ function commandSwitch(command, doWhatItSays = false)
 				function(error, response, body) {
 
 		  		// If the request is successful (i.e. if the response status code is 200).
-		  		if (!error && response.statusCode === 200) {
-
+		  		if (!error && response.statusCode === 200)
+		  		{
 					// Parse and console log the movie info.
 			  		var info = JSON.parse(body);
 
-			  		var infoBlock = "\nTitle:       " + info.Title + 
-			  		                "\nYear:        " + info.Year + 
-			  		                "\nIMDB Rating: " + info.imdbRating + 
-			  		                "\nR. Tomatoes: " + info.Ratings[1].Value +
-			  		                "\nCountry:     " + info.Country +
-			  		                "\nLanguage     " + info.Language +
-			  		                "\nPlot:        " + info.Plot +
-			  		                "\nActors:      " + info.Actors;
+			  		// Ensure the title and rotten tomatoes values are defined to
+			  		// to prevent errors in case movie input is bad.
+			  		if ((info.Title !== undefined) && (info.Ratings[1] !== undefined))
+			  		{
+			  			var infoBlock = "\nTitle:       " + info.Title + 
+			  		   	             "\nYear:        " + info.Year + 
+			  		      	          "\nIMDB Rating: " + info.imdbRating + 
+			  		         	       "\nR. Tomatoes: " + info.Ratings[1].Value +
+			  		            	    "\nCountry:     " + info.Country +
+			  		               	 "\nLanguage     " + info.Language +
+			  		                 	 "\nPlot:        " + info.Plot +
+			  		                 	 "\nActors:      " + info.Actors;
 
-			  		console.log(infoBlock);
+			  			console.log(infoBlock);
 
-			  		// Write the info to the log file.
-			  		logEntry(logFile, infoBlock);
+			  			// Write the info to the log file.
+			  			logEntry(logFile, infoBlock);
+			  		}
+
+			  		else
+			  		{
+			  			console.log("\nMovie Not Found!");
+			  		}
 		  		}
 			});
 
@@ -216,5 +226,5 @@ function commandSwitch(command, doWhatItSays = false)
 
 	        console.log("Unsupported Command!  Please try again!");
 
-	}    // switch statement
+	}    // End: switch statement
 };      // End: commandSwitch function
